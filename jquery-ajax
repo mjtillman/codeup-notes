@@ -1,10 +1,15 @@
-jQuery
+==========================================================================
+  jQuery
+--------------------------------------------------------------------------
 
-$(document).ready(function() {
+    $(document).ready(function() {
 
-});
+    });
 
-Selectors
+
+==========================================================================
+  jQuery Selectors
+--------------------------------------------------------------------------
 
 	ID
 	$(‘#id’)
@@ -21,7 +26,10 @@ Selectors
 	All
 	#(‘*’)
 
-Mouse Events
+
+==========================================================================
+  jQuery Mouse Events
+--------------------------------------------------------------------------
 
 	Vanilla JS:
 		var ele = document.getElementById(‘myElement’)
@@ -39,15 +47,20 @@ Mouse Events
 	.hover	or	.mouseenter + .mouseleave
 
 
-Keyboard Events
+==========================================================================
+  jQuery Keyboard Events
+--------------------------------------------------------------------------
 
-	.keydown		-works for any key
+	.keydown	-works for any key
 	.keypress	-does not include modifier keys (shift, ctrl, esc)
 	.keyup		-triggers when key is released
 	.on
 	.off
 
-Attribute Methods
+
+==========================================================================
+  jQuery Attribute Methods
+--------------------------------------------------------------------------
 
 	.html()
 	.css()
@@ -55,7 +68,11 @@ Attribute Methods
 	.removeClass()
 	.toggleClass()
 
-Traversing Methods
+
+==========================================================================
+  jQuery Traversing Methods
+--------------------------------------------------------------------------
+
 	.each()
 	.first()
 	.last()
@@ -63,13 +80,17 @@ Traversing Methods
 	.child()
 	.next()
 
-jQuery Effects
+
+==========================================================================
+  jQuery Effects
+--------------------------------------------------------------------------
 
 		.hide()
 		.show()
 		.toggle()
 
 	Animated Effects
+
 		Fading
 			.fadeIn()
 			.fadeOut()
@@ -79,7 +100,11 @@ jQuery Effects
 			.slideDown()
 			.slideToggle()
 
-JavaScript Object Notation (JSON)
+
+==========================================================================
+  JavaScript Object Notation (JSON)
+--------------------------------------------------------------------------
+
 	{}	empty object
 	[]	empty array
 
@@ -91,26 +116,130 @@ JavaScript Object Notation (JSON)
 
 	Values can be:
 		A quoted string:	“string-here”
-		A number:		3.14
-		An object:		{}
-		An array:		[]
-		A Boolean:		true or false
-		Null:			null
+		A number:		    3.14
+		An object:		    {}
+		An array:		    []
+		A boolean:		    true or false
+		Null:			    null
 
-Ajax Requests
 
-================================= REVIEW QUESTIONS
+===========================================================================
+  Ajax Requests
+---------------------------------------------------------------------------
+
+Jquery simplifies ajax requests. Here is a basic request:
+
+    $.ajax("/some-url")
+
+
+
+Here is an ajax request with options:
+
+    $.ajax("/some-url"), {
+        type: "POST",
+        data: {
+            name: "John",
+            location: "Boston"
+        }
+    }
+
+    Options available:
+
+    type:
+        "GET", "POST", "PUT", or "DELETE".  Defaults to "GET".
+
+    data:
+        a JS object (see JSON for formatting external .json files)
+
+    dataType:
+        type of data expected
+
+    url:
+        can be specified here instead of passing string to $.ajax
+
+    username:
+    password:
+        when needed for security purposes
+
+    headers:
+        <something complex that needs to be researched>
+
+
+
+Ajax requests are asynchronous, use methods with callback functions like:
+
+    $.ajax("/some-url").done(function(data, status, jqXhr) {
+
+    });
+
+    where   data = data from server
+            status = string indicating status
+            jqXhr = obj representing ajax request
+
+    Code specified in .done executes once the request is processed.
+
+    More ajax methods besides .done:
+        .fail - executes if server returns a 404 error
+            jqXhr
+            status
+            error
+
+        .always
+
+
+Can be used separately or chained and used a little like a switch
+statement:
+
+    $.ajax("/some-url").done(function(data, status, jqXhr) {
+
+        // do this code when a request is successful
+
+    )}.fail(function(jqXhr, status, error) {
+
+        // do this code if the request fails
+
+    )}.always(function () {
+
+        // this code will always run with the ajax request
+
+    });
+
+Can also be used with named functions:
+    function onSuccess(data, status, jqXhr) {
+        // display the requested data to the user
+    }
+
+    function onFail(jqXhr, status, error) {
+        // tell the user something went wrong, and to try again later
+    }
+
+    function stopLoadingAnimation() {
+        // the request is no longer pending, hide the loading spinner
+    }
+
+    $.ajax("/some-url")
+        .done(onSuccess)
+        .fail(onFail)
+        .always(stopLoadingAnimation);
+
+===========================================================================
+  REVIEW QUESTIONS
+---------------------------------------------------------------------------
 
 What is jQuery? Why is it useful?
 
 What determines if a jQuery method can be chained after another?
 
-How can an event listener be added to multiple elements using jQuery where the listener acts upon the specific element the event was trigged on?
+How can an event listener be added to multiple elements using jQuery
+where the listener acts upon the specific element the event was trigged on?
 
 What is the difference between .click(callback) and .on('click', callback)?
 
-What is a getter and a setter? What are some methods that can be used either way? What is different between a getter and setter version of these methods?
+What is a getter and a setter? What are some methods that can be used
+either way? What is different between a getter and setter version of
+these methods?
 
-What is the best way in a single statement to change several style properties for a specific element using jQuery? Why is this the best way?
+What is the best way in a single statement to change several style
+properties for a specific element using jQuery? Why is this the best way?
 
 
