@@ -1,0 +1,116 @@
+jQuery
+
+$(document).ready(function() {
+
+});
+
+Selectors
+
+	ID
+	$(‘#id’)
+
+	Class
+	$(‘.class’)
+
+	Element
+	$(‘element’)
+
+	Multiple Selectors
+	$(‘selector1, selector2’)
+
+	All
+	#(‘*’)
+
+Mouse Events
+
+	Vanilla JS:
+		var ele = document.getElementById(‘myElement’)
+		ele.addEventListener(‘click’, function(e) {
+			//insert code here
+		});
+
+	jQuery:
+		$(selector).click(function() {
+			//insert code here
+		});
+
+	.click
+	.dblclick
+	.hover	or	.mouseenter + .mouseleave
+
+
+Keyboard Events
+
+	.keydown		-works for any key
+	.keypress	-does not include modifier keys (shift, ctrl, esc)
+	.keyup		-triggers when key is released
+	.on
+	.off
+
+Attribute Methods
+
+	.html()
+	.css()
+	.addClass()
+	.removeClass()
+	.toggleClass()
+
+Traversing Methods
+	.each()
+	.first()
+	.last()
+	.parent()
+	.child()
+	.next()
+
+jQuery Effects
+
+		.hide()
+		.show()
+		.toggle()
+
+	Animated Effects
+		Fading
+			.fadeIn()
+			.fadeOut()
+			.fadeToggle()
+		Sliding
+			.slideUp()
+			.slideDown()
+			.slideToggle()
+
+JavaScript Object Notation (JSON)
+	{}	empty object
+	[]	empty array
+
+	Properties must be in double-quoted strings:
+	{
+		“prop1”: “value1”,
+		“prop2”: “value2
+	}
+
+	Values can be:
+		A quoted string:	“string-here”
+		A number:		3.14
+		An object:		{}
+		An array:		[]
+		A Boolean:		true or false
+		Null:			null
+
+Ajax Requests
+
+================================= REVIEW QUESTIONS
+
+What is jQuery? Why is it useful?
+
+What determines if a jQuery method can be chained after another?
+
+How can an event listener be added to multiple elements using jQuery where the listener acts upon the specific element the event was trigged on?
+
+What is the difference between .click(callback) and .on('click', callback)?
+
+What is a getter and a setter? What are some methods that can be used either way? What is different between a getter and setter version of these methods?
+
+What is the best way in a single statement to change several style properties for a specific element using jQuery? Why is this the best way?
+
+
