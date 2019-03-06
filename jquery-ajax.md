@@ -152,7 +152,7 @@ Options available:
 - `headers:` <something complex that needs to be researched>
 
 # Asynchronous AJAX Requests and You
-Ajax requests are asynchronous, use methods with callback functions like:
+Ajax requests are asynchronous, use methods with callback functions (actually, this is adding an event listener to not run the callback function until the request is processed) like:
 
     $.ajax("/some-url").done(function(data, status, jqXhr) {
 
