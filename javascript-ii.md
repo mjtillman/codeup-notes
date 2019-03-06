@@ -1,4 +1,4 @@
-# JS ES 6
+# JavaScript ES 6
 AKA ecmascript2015
 
 - `let`
@@ -10,5 +10,12 @@ AKA ecmascript2015
     
 - **Template Strings**
 - `for .. of`
-- **Arrow Functions**
+
+# Arrow Functions
+    const sayHello = function (name) {
+        return 'Hello, ' + name + '!';
+    }
+is the same as
+
+    const sayHello = (name) => 'Hello, ' + name + '!';
   

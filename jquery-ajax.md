@@ -1,21 +1,21 @@
 # jQuery
 CDN
 
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    https://code.jquery.com/jquery-3.3.1.js
 
 Don't forget to use a ready event listener if you are including JS at the top of the HTML file:
 
     $(document).ready(function() {
 
     });
-# jQuery Selectors
+## jQuery Selectors
 Use with HTML/ CSS selectors:
 - `$(‘#id’)`
 - `$(‘.class’)`
 - `$(‘element’)`
 - `$(‘selector1, selector2’)`
 - `#(‘*’)`
-# jQuery Event Listeners
+## jQuery Event Listeners
 Vanilla JS:
 
     var ele = document.getElementById(‘myElement’)
@@ -28,7 +28,7 @@ jQuery:
 		//insert code here
 	});
 		
-# jQuery Mouse Events
+## jQuery Mouse Events
 Example:
 
     $(selector).click(handler)
@@ -36,7 +36,7 @@ Example:
 - `.dblclick`
 - `.hover`	or	`.mouseenter` + `.mouseleave`
 
-#  jQuery Keyboard Events
+##  jQuery Keyboard Events
 Example:
 
     $(selector).keydown(handler)
@@ -53,7 +53,7 @@ https://www.pdiniz.com/why-you-should-always-use-jquerys-onclick-instead-of-clic
     
     });
 
-#  jQuery Attribute Methods
+##  jQuery Attribute Methods
 - `.html()`
 - `.css()`
 - `.addClass()`
@@ -66,7 +66,7 @@ Examples:
     $(selector).css('color', 'red')
     $(selector).addClass('centered')
 
-# jQuery Traversing Methods
+## jQuery Traversing Methods
 - `.each()`
 - `.first()`
 - `.last()`
@@ -91,12 +91,12 @@ JS
     $('li').each(function(index) {
         $(this).css('color', 'red')
     });
-# jQuery Effects
+## jQuery Effects
 - `.hide()`
 - `.show()`
 - `.toggle()`
 
-# jQuery Animated Effects
+## jQuery Animated Effects
 - Fading
     - `.fadeIn()`
     - `.fadeOut()`
@@ -110,7 +110,7 @@ You can put delays (in ms) to increase animation duration:
 
     $(selector).slideToggle(3000);
 
-#  JavaScript Object Notation (JSON)
+## JavaScript Object Notation (JSON)
 `{ }`	empty object
 `[ ]`	empty array
 
@@ -129,10 +129,14 @@ Values can be:
 - A boolean:        `true or false`
 - Null:			    `null`
 
-# Ajax Requests
+## Ajax Requests
 Jquery simplifies ajax requests. Here is a basic request:
 
     $.ajax("/some-url")
+    
+Here is a simplified `get` request:
+
+    var foo = $.get('another-url') 
 Here is an ajax request with options:
 
     $.ajax("/some-url"), {
@@ -144,14 +148,14 @@ Here is an ajax request with options:
     }
 
 Options available:
-- `type:` GET", "POST", "PUT", or "DELETE".  Defaults to "GET".
+- `type:` `GET`, `POST`, `PUT`, or `DELETE`.  Defaults to `GET`.
 - `data:` a JS object (see JSON for formatting external .json files)
 - `dataType:` type of data expected
 - `url:` can be specified here instead of passing string to $.ajax
 - `username / password:` when needed for security purposes
 - `headers:` <something complex that needs to be researched>
 
-# Asynchronous AJAX Requests and You
+## Asynchronous AJAX Requests and You
 Ajax requests are asynchronous, use methods with callback functions (actually, this is adding an event listener to not run the callback function until the request is processed) like:
 
     $.ajax("/some-url").done(function(data, status, jqXhr) {
