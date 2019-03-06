@@ -1,8 +1,15 @@
 # jQuery
+CDN
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+Don't forget to use a ready event listener if you are including JS at the top of the HTML file:
+
     $(document).ready(function() {
 
     });
 # jQuery Selectors
+Use with HTML/ CSS selectors:
 - `$(‘#id’)`
 - `$(‘.class’)`
 - `$(‘element’)`
@@ -22,18 +29,25 @@ jQuery:
 	});
 		
 # jQuery Mouse Events
+Example:
+
+    $(selector).click(handler)
 - `.click`
 - `.dblclick`
 - `.hover`	or	`.mouseenter` + `.mouseleave`
 
 #  jQuery Keyboard Events
+Example:
+
+    $(selector).keydown(handler)
 - `.keydown` works for any key
 - `.keypress` does not include modifier keys (shift, ctrl, esc)
 - `.keyup` triggers when key is released
 - `.on`
 - `.off`
 
-Don't forget
+Don't forget what Justin said:
+https://www.pdiniz.com/why-you-should-always-use-jquerys-onclick-instead-of-click/
 
     .on('click', function()){
     
@@ -46,6 +60,12 @@ Don't forget
 - `.removeClass()`
 - `.toggleClass()`
 
+Examples:
+
+    $(selector).html('insert text here')
+    $(selector).css('color', 'red')
+    $(selector).addClass('centered')
+
 # jQuery Traversing Methods
 - `.each()`
 - `.first()`
@@ -53,7 +73,24 @@ Don't forget
 - `.parent()`
 - `.child()`
 - `.next()`
-	
+
+.each Example:
+
+HTML
+
+    <ul>
+        <li>Rio Grande</li>
+        <li>Comal</li>
+        <li>Frio</li>
+        <li>Guadalupe</li>
+        <li>San Marcos</li>
+    </ul>
+    
+JS
+    
+    $('li').each(function(index) {
+        $(this).css('color', 'red')
+    });
 # jQuery Effects
 - `.hide()`
 - `.show()`
@@ -68,6 +105,10 @@ Don't forget
     - `.slideUp()`
     - `.slideDown()`
     - `.slideToggle()`
+    
+You can put delays (in ms) to increase animation duration:
+
+    $(selector).slideToggle(3000);
 
 #  JavaScript Object Notation (JSON)
 `{ }`	empty object
