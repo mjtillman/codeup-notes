@@ -11,15 +11,15 @@
 # jQuery Event Listeners
 Vanilla JS:
 
-        var ele = document.getElementById(‘myElement’)
-	    ele.addEventListener(‘click’, function(e) {
-	        //insert code here
-        });
+    var ele = document.getElementById(‘myElement’)
+    ele.addEventListener(‘click’, function(e) {
+        //insert code here
+     });
 jQuery:
 
-		$(selector).click(function() {
-			//insert code here
-		});
+	$(selector).click(function() {
+		//insert code here
+	});
 		
 # jQuery Mouse Events
 - `.click`
@@ -32,6 +32,12 @@ jQuery:
 - `.keyup` triggers when key is released
 - `.on`
 - `.off`
+
+Don't forget
+
+    .on('click', function()){
+    
+    });
 
 #  jQuery Attribute Methods
 - `.html()`
@@ -68,6 +74,7 @@ jQuery:
 `[ ]`	empty array
 
 Properties must be in double-quoted strings:
+
     {
 		“prop1”: “value1”,
 		“prop2”: “value2
@@ -103,6 +110,7 @@ Options available:
 - `username / password:` when needed for security purposes
 - `headers:` <something complex that needs to be researched>
 
+# Asynchronous AJAX Requests and You
 Ajax requests are asynchronous, use methods with callback functions like:
 
     $.ajax("/some-url").done(function(data, status, jqXhr) {
