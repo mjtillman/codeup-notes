@@ -1,29 +1,36 @@
 # JavaScript ES6
 AKA ecmascript2015
 
-- **Block Scoped Variables**
+#### Block Scoped Variables
 
 - `let` and `const` v `var`
-    - `let` limits variable scope within its container block
+    - `let` limits a variable's scope within its container block
     - `const` cannot be redefined, also limited to block scope
 
-- **Exponentiation Operator**
+#### Exponentiation Operator
 
-    - You can now use `2 ** 8` instead of `Math.pow(2, 8)` for 2 ^ 8.
+You can now use `2 ** 8` instead of `Math.pow(2, 8)` for 2 ^ 8.
 
-- **Template Literals (or Template Strings)**
+#### Template Literals (or Template Strings)
 
 ES6 supports string interpolation, which is a more powerful way of concatenating
 strings.
 
-var apples = 4;
-var bananas = 3;
-console.log(`I have ${apples} apples`);
-console.log(`I have ${apples + bananas} fruit`);
+Code:
 
-- **`for .. of`**
+    var apples = 4;
+    var bananas = 3;
+    console.log(`I have ${apples} apples`);
+    console.log(`I have ${apples + bananas} fruit`);
+    
+Output:
 
-# Arrow Functions
+    I have 4 apples
+    I have 7 fruit
+
+#### `for .. of`
+
+#### Arrow Functions
     const sayHello = function (name) {
         return 'Hello, ' + name + '!';
     }

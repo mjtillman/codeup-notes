@@ -206,7 +206,7 @@ Can also be used with named functions:
         .fail(onFail)
         .always(stopLoadingAnimation);
 
-# REVIEW QUESTIONS
+## REVIEW QUESTIONS
 - What is jQuery? Why is it useful?
 - What determines if a jQuery method can be chained after another?
 - How can an event listener be added to multiple elements using jQuery
